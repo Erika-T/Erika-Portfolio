@@ -1,0 +1,39 @@
+body {
+  @media (max-width: 768px) {
+
+    h1 {
+      font-size: calc(var(--txt-h1) - 10px);
+      
+      &.page-title {
+        padding: 15% 0 7%;
+      }
+    }
+    
+    h2 {
+      font-size: calc(var(--txt-h2) - 15px);
+    }
+    
+    h3 {
+      font-size: calc(var(--txt-h3) - 5px);
+    }
+  }
+  
+  @media (max-width: 425px) {
+    h1 {
+      font-size: calc(var(--txt-h1) - 20px);
+      
+      &.page-title {
+        padding: 30% 0 15%;
+      }
+    }
+    
+    .logo-btn, .logo-btn > img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  
+  p, table, label, input, textarea, button, footer {
+    font-size: calc(var(--txt) - 2px);
+  }
+}

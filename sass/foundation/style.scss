@@ -1,0 +1,98 @@
+@import "variables";
+
+@font-face {
+  font-family: 'Honoka Mincho';
+  src: url('../../fonts/honokamin.ttf') format('truetype');
+}
+
+body {
+  width: 100vw;
+  height: 100%;
+  font-family: 'Honoka Mincho', Verdana, Geneva, Tahoma, sans-serif;
+  color: $black;
+  font-size: $txt;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background-size: cover;
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .container {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  h1 {
+    font-size: $txt-h1;
+    font-weight: bold;
+  }
+  
+  h1.page-title {
+    text-align: center;
+    padding: 8% 0 4%;
+  }
+  
+  h2 {
+    font-size: $txt-h2;
+  }
+  
+  h3 {
+    font-size: $txt-h3;
+  }
+  
+  p, table, label, input, textarea, button, footer {
+    font-size: $txt;
+    letter-spacing: 1;
+  }
+  
+  p, table, label, input, textarea, footer {
+    line-height: 2.5;
+  }
+
+  main {
+    position: relative;
+    width: 100vw;
+  }
+
+  @media (min-width: 1025px) {
+    .flexbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  h1::selection, h2::selection, h3::selection, p::selection, th::selection, td::selection, a::selection, button::selection, footer::selection, label::selection, input::selection,textarea::selection {
+    background: none;
+    text-shadow: 0 0 5px $red;
+  }
+
+  /* Fade Effect */
+  .load-fade, .scroll-fade {
+    opacity: 0;
+    transition: $transition;
+  }
+
+  .load-fade.done, .scroll-fade.done {
+    opacity: 1;
+  }
+
+  /* Accessibility */
+  .u-visuallyHidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+  }
+}

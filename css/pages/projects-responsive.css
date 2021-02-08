@@ -1,0 +1,43 @@
+#projects .modal .modal_content .modal_inner .responsive-view.pc-size {
+  width: 300px;
+}
+#projects .modal .modal_content .modal_inner .responsive-view.tablet-size {
+  width: 150px;
+}
+#projects .modal .modal_content .modal_inner .responsive-view.mobile-size {
+  width: 75px;
+}
+@media (max-width: 960px) {
+  #projects .project {
+    margin-bottom: 50px;
+  }
+  #projects .modal .modal_content {
+    width: 90%;
+    overflow-y: scroll;
+  }
+  #projects .modal .modal_content .responsive-view {
+    display: block;
+    margin: 0 auto 20px;
+  }
+}
+@media (max-width: 768px) {
+  #projects .project .hover_shine {
+    width: 100%;
+  }
+}
+@media (max-width: 425px) {
+  #projects .modal .modal_content {
+    padding: 20px 20px;
+  }
+  #projects .modal .modal_content .modal_inner .responsive-view.pc-size {
+    width: 100%;
+  }
+  #projects .modal .modal_content .modal_inner .responsive-view.tablet-size {
+    width: 70%;
+  }
+  #projects .modal .modal_content .modal_inner .responsive-view.mobile-size {
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=projects-responsive.css.map */

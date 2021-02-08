@@ -1,0 +1,19 @@
+header {
+  .p-drawer {
+    nav#gnav {
+      @media (max-width: 768px) {
+        ul {
+          font-size: calc(var(--txt-h3) - 5px);
+        }
+      }
+      ul {
+        @media (max-width: 425px) {
+          li {
+            margin: 0 10px;
+            padding: 0 10px;
+          }
+        }
+      }
+    }
+  }
+}

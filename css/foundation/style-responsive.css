@@ -1,0 +1,31 @@
+@media (max-width: 768px) {
+  body h1 {
+    font-size: calc(var(--txt-h1) - 10px);
+  }
+  body h1.page-title {
+    padding: 15% 0 7%;
+  }
+  body h2 {
+    font-size: calc(var(--txt-h2) - 15px);
+  }
+  body h3 {
+    font-size: calc(var(--txt-h3) - 5px);
+  }
+}
+@media (max-width: 425px) {
+  body h1 {
+    font-size: calc(var(--txt-h1) - 20px);
+  }
+  body h1.page-title {
+    padding: 30% 0 15%;
+  }
+  body .logo-btn, body .logo-btn > img {
+    width: 40px;
+    height: 40px;
+  }
+}
+body p, body table, body label, body input, body textarea, body button, body footer {
+  font-size: calc(var(--txt) - 2px);
+}
+
+/*# sourceMappingURL=style-responsive.css.map */

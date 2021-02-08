@@ -1,0 +1,68 @@
+#projects {
+
+  .modal {
+    .modal_content {
+      .modal_inner {
+        .responsive-view.pc-size {
+          width: 300px;
+        }
+        
+        .responsive-view.tablet-size {
+          width: 150px;
+        }
+        
+        .responsive-view.mobile-size {
+          width: 75px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 960px) {
+  .project {
+    margin-bottom: 50px;
+  }
+  
+  .modal {
+    .modal_content {
+      width: 90%;
+      overflow-y: scroll;
+      
+      .responsive-view {
+        display: block;
+        margin: 0 auto 20px;
+      }
+    }
+  }
+}
+
+  @media (max-width: 768px) {
+    .project {
+      .hover_shine {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 425px) {
+    .modal {
+      .modal_content {
+        padding: 20px 20px;
+
+        .modal_inner {
+          .responsive-view.pc-size {
+            width: 100%;
+          }
+          
+          .responsive-view.tablet-size {
+            width: 70%;
+          }
+          
+          .responsive-view.mobile-size {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}

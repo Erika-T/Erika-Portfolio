@@ -1,0 +1,141 @@
+@import "../foundation/variables";
+
+#projects {
+  text-align: center;
+  
+  .project {
+    padding-bottom: 100px;
+    
+    h2 {
+      margin-top: 20px;
+    }
+    
+    .hover_shine {
+      width: 60%;
+      margin: 0 auto;
+      
+      img.thumbnail {
+        width: 100%;
+        display: block;
+      }
+      
+      &:hover > figure {
+        filter: grayscale(0);
+      }
+    }
+  }
+
+  /* Modal Window */
+  .modal {
+    display: none;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    text-align: center;
+    
+    .modal_bg {
+      background: rgba(0,0,0, .8);
+      height: 100vh;
+      position: absolute;
+      width: 100%;
+    }
+    
+    .modal_content {
+      background: $white;
+      left: 50%;
+      top: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      height: 85%;
+      padding: 20px 40px;
+      
+      .close-btn {
+        float: right;
+      }
+      
+      hr {
+        margin: 20px 0;
+      }
+      
+      h2 {
+        margin-bottom: 20px;
+      }
+      
+      i {
+        font-size: 25px;
+        margin: 0 5px;
+      }
+      
+      .responsive-view {
+        margin: 0 20px;
+      }
+      
+      .responsive-view.pc-size {
+        width: 400px;
+      }
+      
+      .responsive-view.tablet-size {
+        width: 200px;
+      }
+      
+      .responsive-view.mobile-size {
+        width: 100px;
+      }
+      
+      p.description {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  @media (min-width: 769px) {
+    .hover_shine {
+
+      figure {
+        position: relative;
+        cursor: pointer;
+        width: 100%;
+        filter: grayscale(1);
+        transition: $transition;
+        
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -75%;
+          z-index: 2;
+          display: block;
+          width: 0;
+          height: 100%;
+          background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+          transform: skewX(-25deg);
+        }
+      }
+    }
+    
+    figure:hover::before,.hover_shine figure:focus::before {
+      width: 50%;
+      animation: shine 2s;
+    }
+    
+    @keyframes shine {
+      100% {
+        left: 75%;
+      }
+    }
+  }
+
+  @media (min-width: 961px) {
+    .modal_inner {
+      position: absolute;
+      width: 90%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

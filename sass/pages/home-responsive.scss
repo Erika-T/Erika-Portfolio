@@ -1,0 +1,24 @@
+@media (max-width: 768px) and (min-width: 426px) {
+  #home .logo_main {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 425px) {
+  #home .logo_main {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+#home {
+  .logo_main {
+    background: url("../../assets/logo_main-medium.png") no-repeat;
+    background-size: cover;
+    
+    &:before {
+      content: none;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGM,yBAA0B;EACxB,4BAAG;IACD,SAAS,EAAE,yBAAyB;;;AAItC,yBAA0B;EACxB,+BAAG;IACD,MAAM,EAAE,MAAM;IACd,OAAO,EAAE,MAAM",
+"sources": ["../../sass/layout/header-responsive.scss"],
+"names": [],
+"file": "header-responsive.css"
+}

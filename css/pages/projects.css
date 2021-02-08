@@ -1,0 +1,116 @@
+#projects {
+  text-align: center;
+  /* Modal Window */
+}
+#projects .project {
+  padding-bottom: 100px;
+}
+#projects .project h2 {
+  margin-top: 20px;
+}
+#projects .project .hover_shine {
+  width: 60%;
+  margin: 0 auto;
+}
+#projects .project .hover_shine img.thumbnail {
+  width: 100%;
+  display: block;
+}
+#projects .project .hover_shine:hover > figure {
+  filter: grayscale(0);
+}
+#projects .modal {
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  text-align: center;
+}
+#projects .modal .modal_bg {
+  background: rgba(0, 0, 0, 0.8);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+}
+#projects .modal .modal_content {
+  background: #fff;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 85%;
+  padding: 20px 40px;
+}
+#projects .modal .modal_content .close-btn {
+  float: right;
+}
+#projects .modal .modal_content hr {
+  margin: 20px 0;
+}
+#projects .modal .modal_content h2 {
+  margin-bottom: 20px;
+}
+#projects .modal .modal_content i {
+  font-size: 25px;
+  margin: 0 5px;
+}
+#projects .modal .modal_content .responsive-view {
+  margin: 0 20px;
+}
+#projects .modal .modal_content .responsive-view.pc-size {
+  width: 400px;
+}
+#projects .modal .modal_content .responsive-view.tablet-size {
+  width: 200px;
+}
+#projects .modal .modal_content .responsive-view.mobile-size {
+  width: 100px;
+}
+#projects .modal .modal_content p.description {
+  margin-bottom: 20px;
+}
+@media (min-width: 769px) {
+  #projects .hover_shine figure {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    filter: grayscale(1);
+    transition: all 0.5s ease-in-out;
+  }
+  #projects .hover_shine figure::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+    transform: skewX(-25deg);
+  }
+  #projects figure:hover::before, #projects .hover_shine figure:focus::before {
+    width: 50%;
+    animation: shine 2s;
+  }
+  @keyframes shine {
+    100% {
+      left: 75%;
+    }
+  }
+}
+@media (min-width: 961px) {
+  #projects .modal_inner {
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/*# sourceMappingURL=projects.css.map */

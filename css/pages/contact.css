@@ -1,0 +1,52 @@
+#contact .container p {
+  text-align: center;
+}
+#contact .container form {
+  padding: 40px 0 100px;
+  width: 60%;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  #contact .container form {
+    width: 100%;
+  }
+}
+#contact .container .ipfield {
+  position: relative;
+  margin-bottom: 40px;
+}
+#contact .container .ipfield input, #contact .container .ipfield textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+#contact .container .ipfield .ip {
+  border: 0;
+  border-bottom: 1px solid #24030b;
+  background-color: transparent;
+  padding-left: 5em;
+}
+#contact .container .ipfield .ip ~ .focus_line {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #c03d4b;
+}
+#contact .container .ipfield .ip:focus ~ .focus_line {
+  left: 0;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+#contact .container .ipfield .ip ~ label {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  transition: all 0.5s ease-in-out;
+}
+#contact .container .ipfield .ip:focus ~ label {
+  font-size: 12px;
+  top: -16px;
+}
+
+/*# sourceMappingURL=contact.css.map */

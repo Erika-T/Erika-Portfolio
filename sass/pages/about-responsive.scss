@@ -1,0 +1,36 @@
+// Content1
+#content1 {
+  .container {
+    display: block;
+
+    .flexbox {
+      text-align: center;
+      width: 100%;
+
+      .me {
+        background: url("../../assets/me-round.png") no-repeat;
+        background-size: contain;
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 20px;
+      }
+
+      td {
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+// Other Contents
+.contents {
+  .inner-wrap {
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  #content1 {
+    height: 115vh;
+  }
+}
