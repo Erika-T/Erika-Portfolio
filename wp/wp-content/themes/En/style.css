@@ -1,0 +1,113 @@
+/*
+Theme Name: En
+Theme URI: http://wordpress.org/themes/En
+Author: Erika Tunjic
+Author URI: http://wordpress.org/
+Description: Simple Japanese style theme
+Version: 1.0
+License: 
+License URI: 
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: 
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+@import "css/foundation/variables.css";
+
+@font-face {
+  font-family: 'Honoka Mincho';
+  src: url('fonts/honokamin.ttf') format('truetype');
+}
+
+body {
+  width: 100vw;
+  height: 100%;
+  font-family: 'Honoka Mincho', Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--black);
+  font-size: var(--txt);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background-size: cover;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  /* width: 90%; */
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: var(--txt-h1);
+  font-weight: bold;
+}
+
+h1.page-title {
+  text-align: center;
+  padding: 8% 0 4%;
+}
+
+h2 {
+  font-size: var(--txt-h2);
+  /* margin-bottom: 20px; */
+}
+
+h3 {
+  font-size: var(--txt-h3);
+  margin-bottom: 20px;
+}
+
+p, table, label, input, textarea, .post-meta, button, footer {
+  font-size: var(--txt);
+  letter-spacing: 1;
+}
+
+p, ul, ol, table, label, input, textarea, footer {
+  line-height: 2.5;
+}
+
+a {
+  transition: var(--transition);
+  position: relative;
+}
+
+a:hover {
+  opacity: .6;
+}
+
+a:hover a:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: var(--black);
+}
+
+h1::selection, h2::selection, h3::selection, p::selection, th::selection, td::selection, a::selection, button::selection, footer::selection, label::selection, input::selection,textarea::selection, img::selection, div::selection {
+  background: none;
+  text-shadow: 0 0 5px var(--red);
+}
+
+main {
+  position: relative;
+  width: 100vw;
+}
+
+/* Fade Effect */
+.load-fade, .scroll-fade {
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.load-fade.done, .scroll-fade.done {
+  opacity: 1;
+}

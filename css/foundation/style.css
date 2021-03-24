@@ -13,6 +13,7 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
   background-size: cover;
+  letter-spacing: 0.1em;
   /* Fade Effect */
   /* Accessibility */
 }
@@ -20,7 +21,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 body .container {
-  width: 90%;
+  width: 60%;
   height: 100%;
   margin: 0 auto;
   position: relative;
@@ -41,7 +42,6 @@ body h3 {
 }
 body p, body table, body label, body input, body textarea, body button, body footer {
   font-size: 16px;
-  letter-spacing: 1;
 }
 body p, body table, body label, body input, body textarea, body footer {
   line-height: 2.5;
@@ -49,13 +49,6 @@ body p, body table, body label, body input, body textarea, body footer {
 body main {
   position: relative;
   width: 100vw;
-}
-@media (min-width: 1025px) {
-  body .flexbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 }
 body h1::selection, body h2::selection, body h3::selection, body p::selection, body th::selection, body td::selection, body a::selection, body button::selection, body footer::selection, body label::selection, body input::selection, body textarea::selection {
   background: none;

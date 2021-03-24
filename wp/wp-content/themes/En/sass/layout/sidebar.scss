@@ -1,0 +1,51 @@
+@import "../foundation/_variables.scss";
+
+/* Sidebar */
+#sidebar {
+  display: block;
+  z-index: 1;
+
+  .widget {
+    margin-bottom: 50px;
+
+    h3 {
+      display: none;
+    }
+
+    li {
+      line-height: 1.8;
+    }
+
+    /* Searchform */
+    .searchform {
+      position: relative;
+      color: $black;
+
+      .searchfield {
+        font-size: 14px;
+        width: 100%;
+        margin: 3px;
+        padding: 10px;
+        border-bottom: solid 1px $black;
+      }
+
+      .searchsubmit {
+        font-family: FontAwesome;
+        font-size: 1.4em;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        padding: 0;
+        cursor: pointer;
+        color: $black;
+        border: none;
+        background: transparent;
+
+        &:hover {
+          opacity: .6;
+        }
+      }
+    }
+  }
+}

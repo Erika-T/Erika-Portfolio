@@ -1,20 +1,4 @@
 $(function(){
-  // Parallax
-  // let $window = $(window);
- 
-  // $('.contents').each(function(index) {
-  //   let $self = $(this);
-  //   let offsetPositions = $self.offset();
- 
-  //   $(window).scroll(function() {
-      // この領域がブラウザに表示されている場合
-  //     if (($window.scrollTop() + $window.height()) > offsetPositions.top && ((offsetPositions.top + $self.height()) > $window.scrollTop())) {
-  //       let offsetY =  -(($window.scrollTop() - offsetPositions.top)/ 17); 
-  //       let positions = '50%' + offsetY + 'px';
-  //       $self.css('backgroundPosition', positions);
-  //     }
-  //   });
-  // });
 
   // Smooth Scroll
   $('a[href^="#"]').click(function(){
@@ -67,8 +51,8 @@ $(function(){
   // Modal
   $(".js-modal-open").each(function() {
     $(this).on("click", function() {
-      let target = $(this).data("target");
-      let modal = document.getElementById(target);
+      let target = $(this).data("target"),
+          modal = document.getElementById(target);
       $(modal).fadeIn();
       return false;
     });
@@ -80,4 +64,18 @@ $(function(){
 
   // About Footer
   $(".contents:last").append("<footer>@2021 Web Developer Erika</footer>");
+
+  $(window).on("load resize", function() {
+    if (window.matchMedia("max-width:425px").matches) {
+      console.log("I am a mobile!");
+    }
+  });
+
+  // Media Rotation
+  $(window).on("orientationchange", function() {
+    let orientation = window.orientation;
+    if(orientation !== 0) {
+      alert("モバイルやタブレット端末をお使いの場合は、画面を縦向きにするとより見やすくなります。Vertical device orientation is reccomended for mobile and tablet");
+    }
+  });
 });

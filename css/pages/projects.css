@@ -1,3 +1,10 @@
+body.fixed {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+
 #projects {
   text-align: center;
   /* Modal Window */
@@ -9,7 +16,7 @@
   margin-top: 20px;
 }
 #projects .project .hover_shine {
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
 }
 #projects .project .hover_shine img.thumbnail {
@@ -44,6 +51,7 @@
   width: 80%;
   height: 85%;
   padding: 20px 40px;
+  overflow-y: scroll;
 }
 #projects .modal .modal_content .close-btn {
   float: right;
@@ -58,16 +66,16 @@
   font-size: 25px;
   margin: 0 5px;
 }
-#projects .modal .modal_content .responsive-view {
+#projects .modal .modal_content img {
   margin: 0 20px;
 }
-#projects .modal .modal_content .responsive-view.pc-size {
+#projects .modal .modal_content img.pc-size {
   width: 400px;
 }
-#projects .modal .modal_content .responsive-view.tablet-size {
+#projects .modal .modal_content img.tablet-size {
   width: 200px;
 }
-#projects .modal .modal_content .responsive-view.mobile-size {
+#projects .modal .modal_content img.mobile-size {
   width: 100px;
 }
 #projects .modal .modal_content p.description {
@@ -80,6 +88,8 @@
     width: 100%;
     filter: grayscale(1);
     transition: all 0.5s ease-in-out;
+    max-height: 560px;
+    overflow: hidden;
   }
   #projects .hover_shine figure::before {
     content: '';

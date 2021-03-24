@@ -4,6 +4,7 @@
     display: block;
 
     .flexbox {
+      display: block;
       text-align: center;
       width: 100%;
 
@@ -31,6 +32,18 @@
 
 @media (max-width: 425px) {
   #content1 {
-    height: 115vh;
+    padding-bottom: 50px;
+    
+    .flexbox {
+      .inner-wrap-bio {
+        table {
+          tr {
+            th {
+              min-width: 100px;
+            }
+          }
+        }
+      }
+    }
   }
 }

@@ -1,21 +1,21 @@
-#projects .modal .modal_content .modal_inner .responsive-view.pc-size {
+#projects .modal .modal_content .modal_inner img.pc-size, #projects .modal .modal_content .modal_inner img.businessCard {
   width: 300px;
 }
-#projects .modal .modal_content .modal_inner .responsive-view.tablet-size {
+#projects .modal .modal_content .modal_inner img.tablet-size {
   width: 150px;
 }
-#projects .modal .modal_content .modal_inner .responsive-view.mobile-size {
+#projects .modal .modal_content .modal_inner img.mobile-size {
   width: 75px;
 }
 @media (max-width: 960px) {
   #projects .project {
-    margin-bottom: 50px;
+    padding-bottom: 40px;
   }
   #projects .modal .modal_content {
     width: 90%;
     overflow-y: scroll;
   }
-  #projects .modal .modal_content .responsive-view {
+  #projects .modal .modal_content img {
     display: block;
     margin: 0 auto 20px;
   }
@@ -29,13 +29,13 @@
   #projects .modal .modal_content {
     padding: 20px 20px;
   }
-  #projects .modal .modal_content .modal_inner .responsive-view.pc-size {
+  #projects .modal .modal_content .modal_inner img.pc-size, #projects .modal .modal_content .modal_inner img.businessCard {
     width: 100%;
   }
-  #projects .modal .modal_content .modal_inner .responsive-view.tablet-size {
+  #projects .modal .modal_content .modal_inner img.tablet-size {
     width: 70%;
   }
-  #projects .modal .modal_content .modal_inner .responsive-view.mobile-size {
+  #projects .modal .modal_content .modal_inner img.mobile-size {
     width: 50%;
   }
 }

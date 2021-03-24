@@ -2,6 +2,7 @@
   display: block;
 }
 #content1 .container .flexbox {
+  display: block;
   text-align: center;
   width: 100%;
 }
@@ -22,7 +23,10 @@
 
 @media (max-width: 425px) {
   #content1 {
-    height: 115vh;
+    padding-bottom: 50px;
+  }
+  #content1 .flexbox .inner-wrap-bio table tr th {
+    min-width: 100px;
   }
 }
 

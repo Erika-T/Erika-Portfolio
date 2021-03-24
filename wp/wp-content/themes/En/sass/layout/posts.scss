@@ -1,0 +1,81 @@
+@import "../foundation/_variables.scss";
+
+#blogList {
+
+  .post {
+    .post-header {
+      h2 {
+        margin-bottom: 20px;
+      }
+    }
+
+    .post-content {
+      .hover_shine {
+
+        &:hover > figure {
+          filter: grayscale(0);
+        }
+
+        figure {
+          position: relative;
+          cursor: pointer;
+          width: 100%;
+          filter: grayscale(1);
+          transition: all 0.5s ease-in-out;
+          height: 330px;
+          overflow: hidden;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -35%;
+            z-index: 2;
+            display: block;
+            width: 0;
+            height: 110%;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+            transform: skewX(-25deg);
+          }
+
+          &:hover::before, &:focus::before {
+            width: 20%;
+            animation: shine 2s;
+          }
+
+          @keyframes shine {
+            100% {
+              left: 130%;
+            }
+          }
+            
+          img {
+            width: 100%;
+            height: auto;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+  row-gap: 50px;
+}
+
+/* Post Nav */
+.post-nav {
+  margin-top: 50px;
+
+  .next {
+    text-align: right;
+  }
+  
+  .prev {
+    text-align: left;
+  }
+}

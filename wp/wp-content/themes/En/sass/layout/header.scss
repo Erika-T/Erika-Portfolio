@@ -1,0 +1,176 @@
+@import "../foundation/_variables.scss";
+
+h1.page-title {
+  font-size: var(--txt-h1);
+  font-weight: bold;
+  text-align: center;
+  padding: 8% 0 4%;
+}
+
+/* Gnav */
+.p-drawer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $black;
+  opacity: 0;
+  -webkit-transition: $transition;
+  transition: $transition;
+  z-index: 0;
+  
+  nav#gnav {
+    writing-mode: vertical-lr;
+    
+    ul {
+      font-size: $txt-h3;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+      li {
+        display: block;
+        margin: 0 20px;
+        padding: 0 20px;
+        border-right: 1px solid $white;
+        color: $white;
+        text-orientation: upright;
+        height: 300px;
+        text-transform: uppercase;
+        
+        a {
+          transition: $transition;
+          
+          &:hover {
+            padding-top: 10px;
+            color: $gold;
+          }
+        }
+      }
+    }
+  }
+}
+
+.is-drawerActive .p-drawer {
+  opacity: 1;
+  z-index: 9;
+}
+
+body.is-drawerActive {
+  overflow: hidden;
+}
+
+/* Hamburger Button */
+.p-hamburger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  outline: none;
+  transition: $transition;
+  -webkit-transition: $transition;
+  background: $white;
+  z-index: 10;
+  padding: 20px;
+  border-radius: 50%;
+  border: 1px solid $black;
+  
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+  
+  .p-hamburger__line {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 18px;
+    height: 2px;
+    background-color: $black;
+    transition: inherit;
+    -webkit-transition: inherit;
+    
+    &:before,
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: inherit;
+      transition: inherit;
+      -webkit-transition: inherit;
+    }
+    
+    &:before {
+      top: -5px;
+    }
+    
+    &:after {
+      top: 5px;
+    }
+  }
+  
+  &[aria-expanded="true"] .p-hamburger__line {
+    background-color: transparent;
+    
+    &::before,
+    &::after {
+      top: 0;
+      background-color: $white;
+    }
+
+    &::before {
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    
+    &::after {
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+  }
+  
+  &[aria-expanded="true"] {
+    background: $black;
+    border: 1px solid $white;
+  }
+}
+
+/* Text Fade */
+.fadeUp, .fadeDown {
+  opacity: 0;
+  transition: $transition;
+}
+
+.fadeUp {
+  transform: translate(0, 100px);
+}
+
+.fadeDown {
+  transform: translate(0, -100px);
+}
+
+/* Accessibility */
+.u-visuallyHidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+}

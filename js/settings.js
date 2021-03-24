@@ -21,7 +21,7 @@ particlesJS('home',{
           },
           //If type = image
           "image": {
-            "src": "assets/petal.png",
+            "src": "petal.png",
             "width": 100,
             "height": 100
           }

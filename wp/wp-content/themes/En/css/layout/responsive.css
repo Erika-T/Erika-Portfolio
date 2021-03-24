@@ -1,0 +1,74 @@
+@media (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: calc(60px - 10px);
+  }
+  h1.page-title {
+    padding: 15% 0 7%;
+  }
+
+  h2 {
+    font-size: calc(40px - 15px);
+  }
+
+  h3 {
+    font-size: calc(30px - 5px);
+  }
+
+  .grid-container {
+    display: block;
+  }
+
+  .p-drawer nav#gnav ul {
+    font-size: calc($txt-h3 - 5px);
+  }
+
+  .post {
+    margin-bottom: 40px;
+  }
+  .post:last-of-type {
+    margin-bottom: 0;
+  }
+
+  #single .post-header {
+    position: static;
+    height: auto;
+  }
+  #single .post-header .post-title, #single .post-header .post-meta {
+    position: static;
+    transform: none;
+  }
+}
+@media (max-width: 425px) {
+  h1 {
+    font-size: calc(60px - 20px);
+  }
+  h1.page-title {
+    padding: 30% 0 15%;
+  }
+
+  .logo-btn, .logo-btn > img {
+    width: 40px;
+    height: 40px;
+  }
+
+  p, table, label, input, textarea, .post-meta, button, footer {
+    font-size: calc(16px - 2px);
+    line-height: 2;
+  }
+
+  .p-drawer nav#gnav ul li {
+    margin: 0 10px;
+    padding: 0 10px;
+  }
+
+  #blogList .post .post-content .hover_shine figure {
+    height: 200px;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */

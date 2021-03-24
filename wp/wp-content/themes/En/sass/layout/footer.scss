@@ -1,0 +1,11 @@
+@import "../foundation/_variables.scss";
+
+/* footer */
+footer {
+  opacity: .5;
+  margin: 40px auto 20px;
+  bottom: 0;
+  color: $black;
+  width: 100%;
+  text-align: center;
+}

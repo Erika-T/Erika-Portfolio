@@ -1,0 +1,44 @@
+/* Sidebar */
+#sidebar {
+  display: block;
+  z-index: 1;
+}
+#sidebar .widget {
+  margin-bottom: 50px;
+  /* Searchform */
+}
+#sidebar .widget h3 {
+  display: none;
+}
+#sidebar .widget li {
+  line-height: 1.8;
+}
+#sidebar .widget .searchform {
+  position: relative;
+  color: #24030b;
+}
+#sidebar .widget .searchform .searchfield {
+  font-size: 14px;
+  width: 100%;
+  margin: 3px;
+  padding: 10px;
+  border-bottom: solid 1px #24030b;
+}
+#sidebar .widget .searchform .searchsubmit {
+  font-family: FontAwesome;
+  font-size: 1.4em;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  padding: 0;
+  cursor: pointer;
+  color: #24030b;
+  border: none;
+  background: transparent;
+}
+#sidebar .widget .searchform .searchsubmit:hover {
+  opacity: .6;
+}
+
+/*# sourceMappingURL=sidebar.css.map */
