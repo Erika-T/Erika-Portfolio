@@ -21,7 +21,7 @@
 }
 #contact .container .ipfield .ip {
   border: 0;
-  border-bottom: 1px solid #24030b;
+  border-bottom: 1px solid #1b0d33;
   background-color: transparent;
   padding-left: 5em;
 }
@@ -31,7 +31,7 @@
   left: 50%;
   width: 0;
   height: 2px;
-  background-color: #c03d4b;
+  background-color: #9367da;
 }
 #contact .container .ipfield .ip:focus ~ .focus_line {
   left: 0;

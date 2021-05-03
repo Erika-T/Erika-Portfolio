@@ -62,18 +62,18 @@ body {
 
   h1::selection, h2::selection, h3::selection, p::selection, th::selection, td::selection, a::selection, button::selection, footer::selection, label::selection, input::selection,textarea::selection {
     background: none;
-    text-shadow: 0 0 5px $red;
+    text-shadow: 0 0 5px $purple;
   }
 
   /* Fade Effect */
-  .load-fade, .scroll-fade {
-    opacity: 0;
-    transition: $transition;
-  }
+  // .load-fade, .scroll-fade {
+  //   opacity: 0;
+  //   transition: $transition;
+  // }
 
-  .load-fade.done, .scroll-fade.done {
-    opacity: 1;
-  }
+  // .load-fade.done, .scroll-fade.done {
+  //   opacity: 1;
+  // }
 
   /* Accessibility */
   .u-visuallyHidden {

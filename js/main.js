@@ -11,42 +11,44 @@ $(function(){
   });
 
   // Fade up
-  load_effect();
+  // load_effect();
   $(window).scroll(function() {
-    scroll_effect();
+    // scroll_effect();
 
     // Page Top
     let scroll = $(document).scrollTop();
-    let pageTop = $(".scrollUp");
+    let pageTop = $(".pageTop > div");
+    let pageTop_txt = $(".pageTop > p");
     if(scroll > 0) {
       pageTop.fadeIn();
-      pageTop
+      pageTop_txt.fadeIn();
     } else {
       pageTop.fadeOut();
+      pageTop_txt.fadeOut();
     }
   });
   // Load fade
-  function load_effect() {
-    let tt = $(window).scrollTop();
-    let hh = $(window).height();
-    $(".load-fade").each(function() {
-      let yy = $(this).offset().top;
-      if(tt > yy - hh) {
-        $(this).addClass("done");
-      }
-    });
-  }
+  // function load_effect() {
+  //   let tt = $(window).scrollTop();
+  //   let hh = $(window).height();
+  //   $(".load-fade").each(function() {
+  //     let yy = $(this).offset().top;
+  //     if(tt > yy - hh) {
+  //       $(this).addClass("done");
+  //     }
+  //   });
+  // }
   // Scroll fade
-  function scroll_effect() {
-    let tt = $(window).scrollTop();
-    let hh = $(window).height();
-    $(".scroll-fade").each(function() {
-      let yy = $(this).offset().top+100;
-      if(tt > yy - hh) {
-        $(this).addClass("done");
-      }
-    });
-  }
+  // function scroll_effect() {
+  //   let tt = $(window).scrollTop();
+  //   let hh = $(window).height();
+  //   $(".scroll-fade").each(function() {
+  //     let yy = $(this).offset().top+100;
+  //     if(tt > yy - hh) {
+  //       $(this).addClass("done");
+  //     }
+  //   });
+  // }
 
   // Modal
   $(".js-modal-open").each(function() {

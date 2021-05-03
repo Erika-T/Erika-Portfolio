@@ -10,7 +10,7 @@
   }
 }
 #content1 {
-  color: #24030b;
+  color: #1b0d33;
   background-color: white;
 }
 #content1 .flexbox {
@@ -40,7 +40,7 @@
   content: "";
   height: 1px;
   width: 100%;
-  background: #24030b;
+  background: #1b0d33;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -51,14 +51,14 @@
     -webkit-transition: all 0.5s ease-in-out;
   }
   #content1 a.scrollDown:focus, #content1 a.scrollDown:hover {
-    filter: drop-shadow(0 0 5px #24030b);
+    filter: drop-shadow(0 0 5px #1b0d33);
   }
   #content1 a.scrollDown span {
     width: 24px;
     height: 24px;
     margin-left: -12px;
-    border-left: 1px solid #24030b;
-    border-bottom: 1px solid #24030b;
+    border-left: 1px solid #1b0d33;
+    border-bottom: 1px solid #1b0d33;
     -webkit-transform: translateZ(-45deg);
     transform: translateZ(-45deg);
     -webkit-animation: sdb 1.5s infinite;

@@ -14,8 +14,8 @@ header button.p-hamburger {
   background: #fff;
   z-index: 10;
   padding: 20px;
-  border-radius: 50%;
-  border: 1px solid #24030b;
+  border-radius: 0;
+  border: 1px solid #1b0d33;
 }
 header button.p-hamburger:hover, header button.p-hamburger:focus {
   transform: scale(1.2);
@@ -29,7 +29,7 @@ header button.p-hamburger .p-hamburger__line {
   margin: auto;
   width: 18px;
   height: 2px;
-  background-color: #24030b;
+  background-color: #1b0d33;
   transition: inherit;
   -webkit-transition: inherit;
 }
@@ -50,7 +50,7 @@ header button.p-hamburger .p-hamburger__line:after {
   top: 5px;
 }
 header button.p-hamburger[aria-expanded="true"] {
-  background: #24030b;
+  background: #1b0d33;
   border: 1px solid #fff;
 }
 header button.p-hamburger[aria-expanded="true"] .p-hamburger__line {
@@ -78,7 +78,7 @@ header .p-drawer {
   bottom: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #24030b;
+  background-color: #1b0d33;
   opacity: 0;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;

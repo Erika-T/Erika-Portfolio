@@ -2,33 +2,27 @@
   width: inherit;
   height: 100vh;
 }
-#home .logo_main {
-  width: 500px;
-  height: 500px;
+
+#home h1 {
+  width: 600px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  background: url("../../assets/logo_main.png") no-repeat;
-  background-size: cover;
-}
-#home .logo_main:before {
-  content: "";
-  width: 110px;
-  height: 110px;
-  background: url("../../assets/flower.png") no-repeat;
-  background-size: cover;
-  position: absolute;
-  top: 180px;
-  left: 60px;
-  transition: all 0.5s ease-in-out;
-}
-#home .logo_main:hover::before {
-  top: 170px;
-  left: 50px;
-  width: 130px;
-  height: 130px;
-  transform: rotateZ(90deg);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
+#home h1 img {
+  width: 600px;
+}
+
+#home h1::before {
+  content: "Web Developer";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -16px;
+  font-size: 16px;
+}
 /*# sourceMappingURL=home.css.map */

@@ -13,6 +13,10 @@
   &:hover {
     transform: scale(1.2);
   }
+
+  img {
+    width: 80px
+  }
 }
 
 /* Button Style */
@@ -57,22 +61,48 @@
   pointer-events: none;
 }
 
-/* Scroll Up Button*/
-a {
-  .scrollUp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+/* PageTop Button*/
+.pageTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3;
+  cursor: pointer;
+  width: 15px;
+  height: 80px;
+
+  div {
+    position: relative;
     display: inline-block;
-    width: 50px;
-    z-index: 3;
+    background-color: $black;
     display: none;
-    cursor: pointer;
-    filter: drop-shadow(0 0 10px $white);
-    
-    &:hover,
-    &:focus {
-      transform: scale(1.2);
+
+    &::before, &::after {
+      position: absolute;
+      content: "";
     }
+
+    &::before {
+      width: 1px;
+      height: 80px;
+      background: $black;
+    }
+
+    &::after {
+      width: 20px;
+      height: 20px;
+      left: -9px;
+      top: 3px;
+      border-right: 1px solid $black;
+      transform: rotate(-45deg);
+    }
+  }
+
+  p {
+    writing-mode: vertical-rl;
+    position: absolute;
+    left: -10px;
+    top: 30px;
+    display: none;
   }
 }
